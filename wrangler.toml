@@ -1,0 +1,7 @@
+name = "beauty-chic-codespace-control"
+main = "src/index.mjs"
+compatibility_date = "2026-10-23"
+workers_dev = true
+
+# GITHUB_WEBHOOK_SECRET and GITHUB_CODESPACE_TOKEN are Cloudflare encrypted
+# dashboard Secrets, intentionally never in this public source repository.
