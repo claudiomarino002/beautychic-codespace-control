@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {webcrypto} from 'node:crypto';
-import worker,{SETTINGS,verifyGitHubSignature,validateEvent} from './controller.mjs';
+import worker,{SETTINGS,verifyGitHubSignature,validateEvent} from './index.mjs';
 if(!globalThis.crypto)globalThis.crypto=webcrypto;
 const e=new TextEncoder();
 const secret='a'.repeat(48);
