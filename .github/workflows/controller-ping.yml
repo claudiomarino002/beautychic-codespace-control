@@ -1,0 +1,22 @@
+name: Beauty Chic public controller smoke test
+on:
+  issue_comment:
+    types: [created]
+permissions: {}
+concurrency:
+  group: bc-public-ping
+  cancel-in-progress: false
+jobs:
+  ping:
+    if: >-
+      github.event.issue.number == 1 &&
+      !github.event.issue.pull_request &&
+      github.event.comment.user.id == 301307069 &&
+      github.event.comment.user.login == 'claudiomarino002' &&
+      github.event.comment.body == 'BC_CONTROLLER_PING_V1'
+    runs-on: ubuntu-slim
+    timeout-minutes: 2
+    steps:
+      - name: No-secret public runner proof
+        shell: bash
+        run: echo "BC_PUBLIC_CONTROLLER_PING_PASS"
